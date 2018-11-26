@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background:linear-gradient(to right,red,blue);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h3></h3>
+    <script>
+        var div = document.querySelector('div')
+        // touch事件：
+        // touchstart:手指触摸开始--手指刚刚触摸到屏幕，一次触摸只会触发一次
+        // touchmove:手指没有离开屏幕，同时在屏幕上滑动，它会持续的触发
+        // touchend:手指离开屏幕瞬间触发，一次触发只会触发一次
+        // touchcancel:touch意外中断
+
+        var startX =0,startY =0
+        // 1.添加touchstart
+        div.addEventListener('touchstart',function(event){
+           console.log(event.targetTouches.length)
+        })
+         // 2.添加touchmove
+         div.addEventListener('touchmove',function(event){
+        })
+         // 3.添加touchend
+         div.addEventListener('touchend',function(event){
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+.jd_layout{
+    width: 100%;
+    height: 1000px;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #eee;
+    // 头部块样式
+    .jd_header{
+        width: 100%;
+        max-width: 640px;
+        height: 40px;
+        background: rgba(233,35,34,0);
+        padding: 5px 0;
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        .jd_logo{
+            width: 56px;
+            height: 30px;
+            background-image: url(../images/jd-sprites.png);
+            background-size: 200px 200px;
+            background-position: 0px -108px
+        }
+        form{
+            flex: 1;
+            padding: 0px 10px;
+            position: relative;
+            &::after{
+                content:'';
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                background-image: url(../images/jd-sprites.png);
+                background-size: 200px 200px;
+                background-position: -57px -108px;
+                left: 15px;
+                top: 3px;
+                z-index: 998;
+            }
+            > input{
+                width: 100%;
+                height: 30px;
+                border: 1px solid #ccc;
+                padding-left: 30px;
+                border-radius: 15px;
+                font-size: 16px;
+                color:#aaa;
+            }
+        }
+        .jd_login{
+            width: 40px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+        }
+    }
+    // 轮播图样式
+    .jd_banner{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        > ul:nth-of-type(1) {
+            // width: 800%;
+            // width: 1000%;
+            position: relative;
+            // left:-100%;
+            > li {
+                // width: 12.5%;
+                // width:10%;
+                float: left;
+                > a{
+                    width: 100%;
+                    display: block;
+                    > img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+        > ul:nth-of-type(2) {
+            width: 128px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+            bottom: 5px;
+            > li {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                border:1px solid #fff;
+                margin-left: 10px;
+                float: left;
+                &:nth-of-type(1){
+                    margin-left: 0px;
+                }
+                &.active{
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    // 导航块样式
+    .jd_nav{
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+        > ul {
+             width: 100%;
+             > li {
+                 width: 25%;
+                 float: left;
+                 text-align: center;
+                 &:nth-of-type(-n + 4){
+                    margin-bottom: 20px;
+                 }
+                 img{
+                     width: 70%;
+                 }
+             }
+        }
+    }
+
+    // 产品块样式
+    .jd_product{
+        // 每一个产品块的样式
+        .jd_pBox{
+            background-color: #fff;
+            margin-top: 10px;
+            .jd_pbTitle{
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+                color: #888;
+                padding-left: 15px;
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 0;
+            }
+        }
+        // 京东秒杀样式结构块
+        .jd_sk{
+            .jd_pbTitle{
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                padding-left: 0;
+                border-bottom: none;
+                .jd_sk_clock{
+                    width: 19px;
+                    height: 23px;
+                    background-image: url(../images/jd-sprites.png);
+                    background-size: 200px 200px;
+                    background-position: -85px -110px;
+                    margin-top: 3px;
+                }
+                .jd_sk_text{
+                    color: #e92322;
+                }
+                .jd_sk_time{
+                    padding-top: 7px;
+                    > span {
+                        width: 12px;
+                        height: 16px;
+                        float: left;
+                        margin-left: 5px;
+                        background-color: #000;
+                        color:#fff;
+                        text-align: center;
+                        line-height: 16px;
+                    }
+                    > span:nth-of-type(3n){
+                        background-color: #fff;
+                        color:#000;
+                    }
+                }
+            }
+            .jd_pbContent{
+                padding: 15px;
+                ul {
+                    width: 100%;
+                    > li {
+                        width: 33.33%;
+                        float: left;
+                        text-align: center;
+                        img{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+       .a_half{
+           width: 50%;
+           > img {
+               width: 100%;
+               display: block;
+           }
+       } 
+       .b_left{
+           border-left: 1px solid #ccc;
+       }
+       .b_right{
+        border-right: 1px solid #ccc;
+        }
+        .b_bottom{
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
